@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "../components/contactform";
+import ContactForm from "../components/ContactForm";
 import Seo from "../components/Seo";
 import { FlexContainer, Blurb } from "../styles";
 
