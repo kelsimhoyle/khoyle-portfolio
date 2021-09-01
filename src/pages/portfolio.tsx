@@ -2,7 +2,7 @@ import React from "react";
 import { PageProps, graphql } from "gatsby";
 import Parallax from "../components/Parallax";
 import PortfolioItem from "../components/PortfolioItem";
-import { ContentLight, Landing, FlexContainer } from "../styles";
+import { ContentLight, Landing } from "../styles";
 
 import bg from "../images/laptop.jpg"
 import Seo from "../components/Seo";

@@ -13,7 +13,8 @@ import {
   SecondaryLink,
   ItemContainer,
   ColorContainer,
-  ContentLight
+  ContentLight,
+  Btn
 } from "../styles";
 import bgImg from "../images/mountain.jpg";
 import PortfolioItem from "../components/PortfolioItem";
@@ -38,7 +39,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
           <FlexContainer align={null}>
 
             <Right>
-              <StaticImage src="../images/intropic.JPG" alt="Kelsi Hoyle" />
+              <StaticImage src="../images/intropic.jpg" alt="Kelsi Hoyle" />
             </Right>
             <Left>
               <p>I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
@@ -49,9 +50,9 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
           </FlexContainer>
         </ContentLight>
 
-        <ColorContainer color="secondary">
+        <ColorContainer color="yellow">
           <h2>Portfolio</h2>
-          <FlexContainer align={null}>
+          <FlexContainer align="center">
             {items.map(({ node: item }) => (
               <ItemContainer>
                 <PortfolioItem
@@ -61,9 +62,9 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
               </ItemContainer>
             ))}
           </FlexContainer>
-          <SecondaryLink>
+          <Btn>
             <Link to="/portfolio">View Full Portfolio</Link>
-          </SecondaryLink>
+          </Btn>
         </ColorContainer>
 
         <Contact />

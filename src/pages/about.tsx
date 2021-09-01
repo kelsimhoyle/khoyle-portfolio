@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Parallax from "../components/Parallax";
 import { ContentLight, Landing, Grid } from "../styles";
 
-import fall from "../images/fall.jpeg";
+// import fall from "../images/fall.jpeg";
 import Seo from "../components/Seo";
 
 const About = () => {
