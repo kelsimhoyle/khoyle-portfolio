@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import addContact from "../../functions/addContact";
+import { Btn } from "../../styles";
 import { Form } from "./styles";
 
 export type ContactDataType = {
     Name: String;
     Email: String;
     Message: String;
-  }
+}
 
 const ContactForm = () => {
     const [data, setData] = useState({ errors: [], submitting: false, submitted: false });
-    const [contactData, setContactData] = useState<ContactDataType>({Name: "", Email: "", Message: ""});
+    const [contactData, setContactData] = useState<ContactDataType>({ Name: "", Email: "", Message: "" });
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => setContactData({
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setContactData({
         ...contactData,
         [e.currentTarget.name]: e.currentTarget.value
     });
@@ -29,41 +30,50 @@ const ContactForm = () => {
 
     return (
         <>
-
             <Form onSubmit={handleSubmit}>
-                <label>
-                    <p>Name:</p>
-                    <input
-                        type="text"
-                        name="Name"
-                        value={contactData.Name as string}
-                        onChange={handleInputChange}
-                    />
+                <label htmlFor="Name">
+                    Name
                 </label>
-                <label>
-                    <p>E-Mail:</p>
-                    <input
-                        type="text"
-                        name="Email"
-                        value={contactData.Email as string}
-                        onChange={handleInputChange}
-                    />
+
+                <input
+                    type="text"
+                    name="Name"
+                    value={contactData.Name as string}
+                    onChange={handleInputChange}
+                    placeholder="Name"
+                />
+                <label htmlFor="Email">
+                    E-Mail
                 </label>
-                <label>
-                    <p>Message:</p>
-                    <input
-                        type="textarea"
-                        name="Message"
-                        value={contactData.Message as string}
-                        onChange={handleInputChange}
-                    />
+
+                <input
+                    type="text"
+                    name="Email"
+                    value={contactData.Email as string}
+                    onChange={handleInputChange}
+                    placeholder="Email"
+
+                />
+                <label htmlFor="Message">
+                    Message
                 </label>
+
+                <textarea
+                    rows={5}
+                    name="Message"
+                    value={contactData.Message as string}
+                    onChange={handleInputChange}
+                    placeholder="Message"
+
+                />
                 <button type="submit">Submit</button>
             </Form>
 
-            {data.errors.length > 0 ? (
-                data.errors.map(error => <p>{error}</p>)
-            ) : null}
+            {
+                data.errors.length > 0 ? (
+                    data.errors.map(error => <p>{error}</p>)
+                ) : null
+            }
 
             {data.submitting ? <p>Submitting contact request...</p> : null}
 

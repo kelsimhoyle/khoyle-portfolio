@@ -16,7 +16,6 @@ import {
   ContentLight,
   Btn
 } from "../styles";
-import bgImg from "../images/mountain.jpg";
 import PortfolioItem from "../components/PortfolioItem";
 import Contact from "../components/Contact";
 
@@ -28,7 +27,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
     <>
       <Seo title="Kelsi Hoyle -- Full Stack Web Developer" />
       <main>
-        <Parallax background={bgImg} height="70vh">
+        <Parallax background="../images/mountain.jpg" height="70vh">
           <Landing>
             <h2><span className="spaced">Hello! I'm Kelsi.</span></h2>
             <p><span className="line">Web Developer and Problem Solver.</span></p>
