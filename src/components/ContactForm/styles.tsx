@@ -1,31 +1,31 @@
 import styled from "styled-components";
 import { colors } from "../../styles/utils";
 
-
 export const Form = styled.form`
-    width: 40vw;
-    paddng: 10vw;
-    margin: 5vw;
+    width: 90%;
     display: flex;
     flex-direction: column;
     background-color: white;
 
     label {
-        margin: .5rem;
-        padding: .5rem;
+        display: none;
     }
-    
-    input,
-    textarea {
-        width: 80%;
-        padding: 5px;
+
+    textarea,
+    input {
+        width: 95%;
+        padding: 10px;
+        margin: 5px;
         box-sizing: border-box;
         border-radius: 5px;
+        font-size: 16px;
+        font-family: inherit;
+        border-color: ${colors.primary};
+
     }
 
     textarea {
         resize: none;
-        height: 150px;
     }
 
 
@@ -34,13 +34,52 @@ export const Form = styled.form`
     }
 
     button {
-        color: white;
-        background-color: ${colors.secondary};
         font-size: 1.5rem;
         border: none;
-        padding: .5rem;
+        background-color: transparent;
+        font-family: inherit;
+        padding: 15px 25px;
         cursor: pointer;
-        text-decoration: none
+        margin: 5px auto;
+        width: fit-content;
+    
+        // Display
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center; 
+    
+        // Visual
+        background-color: ${colors.primary};
+        color: #fff;
+        border-radius: 5px;
+        -moz-box-shadow: 0px 5px 5px #808080;
+        -webkit-box-shadow: 0px 5px 5px #808080; 
+        box-shadow: 0px 5px 5px #808080;
+    
+        // Text
+        text-align: center;
+        line-height: 1.1;
+    
+        transition: 220ms all ease-in-out;
+    
+        &:hover,
+        &:active {
+          background-color: ${colors.secondary};
+        }
+    
+        &:focus {
+          outline-style: solid;
+          outline-color: transparent;
+          box-shadow: 0 0 0 4px #808080);
+        }
+    
+    
+        a {
+          padding: 20px 30px;
+          color: white;
+          text-decoration: none;
+        }
     }
 
 `

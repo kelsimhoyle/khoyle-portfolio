@@ -269,9 +269,9 @@ export const ItemContainer = styled.div`
     background-color: white;
     align-self: stretch;
     border-radius: 20px;
-    -moz-box-shadow: 0px 5px 5px #000;
-    -webkit-box-shadow: 0px 5px 5px #000; 
-    box-shadow: 0px 5px 5px #000;
+    -moz-box-shadow: 0px 5px 5px #808080;
+    -webkit-box-shadow: 0px 5px 5px #808080; 
+    box-shadow: 0px 5px 5px #808080;
 
     ${breakpoints("width", "%", [
   { 800: "90" }
@@ -302,9 +302,9 @@ export const Btn = styled.div`
     background-color: ${colors.primary};
     color: #fff;
     border-radius: 5px;
-    -moz-box-shadow: 0px 5px 5px #000;
-    -webkit-box-shadow: 0px 5px 5px #000; 
-    box-shadow: 0px 5px 5px #000;
+    -moz-box-shadow: 0px 5px 5px #808080;
+    -webkit-box-shadow: 0px 5px 5px #808080; 
+    box-shadow: 0px 5px 5px #808080;
 
     // Text
     text-align: center;
@@ -320,7 +320,7 @@ export const Btn = styled.div`
     &:focus {
       outline-style: solid;
       outline-color: transparent;
-      box-shadow: 0 0 0 4px #000);
+      box-shadow: 0 0 0 4px #808080);
     }
 
 
@@ -340,4 +340,12 @@ export const HightLightedH3 = styled.h3`
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,0,1) 50%, rgba(255,255,0,1) 100%);
   width: fit-content;
 }
+`
+
+export const ContactPage = styled.main`
+    height: 100vh;
+    background-color: ${colors.yellow};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
