@@ -16,9 +16,9 @@ export const Lax = styled.div<LaxProps>`
   background-image: url(${props => props.bg});
   background-position: center;
   background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    transform: translateZ(0px);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transform: translateZ(0px);
 
 
   .background {
@@ -35,6 +35,10 @@ export const Lax = styled.div<LaxProps>`
 .foreground {
   transform-origin: 0;
   transform: translateZ(3px) scale(0.625);
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 }
 `

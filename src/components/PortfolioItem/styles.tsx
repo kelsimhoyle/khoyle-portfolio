@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles/utils";
 
 export const Cats = styled.div`
     display: flex;
@@ -12,15 +13,32 @@ export const Cats = styled.div`
 `
 
 type PortItem = {
-    direction: string;
+    home: boolean;
 }
 
 export const PortItem = styled.div<PortItem>`
     width: 80%;
-    margin: 50px auto;
+    margin: ${props => props.home ? "10px" : "20px"} auto;
     display: flex;
-    flex-direction: ${props => props.direction};
+    flex-direction: ${props => props.home ? "column" : "row"};
     align-items: center;
+    line-height: 1.5;
+
+    ${breakpoints("flex-direction", "", [
+        { 800: "column" },
+        { 600: "column" },
+        { 450: "column" }
+      ])};
+
+    p,
+     a {
+        margin: 5px auto;
+        line-height: 1.25
+    }
+
+    a {
+        justify-self: center;
+    }
 
     .image,
     .about {

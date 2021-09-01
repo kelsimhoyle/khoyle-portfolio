@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { MenuLinksType } from "../../layouts";
 import NavLinks from "../NavLinks";
 import { Head } from "./styles";
-import logo from "../../images/1.png";
 
 type HeaderProps = {
     siteTitle: string;

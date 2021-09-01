@@ -21,10 +21,11 @@ export const breakpoints = (
   };
 
 export const colors = {
-    primary:  "#565656",
-    secondary: "#76323f",
-    light: "#d7cec7",
-    primaryLight: "#c09f80"
+    primary:  "#5da2d5",
+    secondary: "#90ccf4",
+    light: "#f78888",
+    primaryLight: "#ececec",
+    yellow: "#f3d250"
 
 }
 
@@ -57,7 +58,7 @@ h2 {
 }
 
 h3 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.5;
     font-weight: bold;
 }
