@@ -8,17 +8,16 @@ import {
   Left,
   Right,
   Landing,
-  Content,
   PrimaryLink,
-  SecondaryLink,
   ItemContainer,
   ColorContainer,
-  ContentLight,
   Btn
 } from "../styles";
 import PortfolioItem from "../components/PortfolioItem";
-import Contact from "../components/Contact";
+import ContactComponent from "../components/ContactComponent";
 
+
+import bg from "../images/mountain.jpg";
 
 const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
   const items = data.allAirtable.edges
@@ -27,29 +26,30 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
     <>
       <Seo title="Kelsi Hoyle -- Full Stack Web Developer" />
       <main>
-        <Parallax background="../images/mountain.jpg" height="70vh">
+        <Parallax background={bg} height="70vh">
           <Landing>
             <h2><span className="spaced">Hello! I'm Kelsi.</span></h2>
             <p><span className="line">Web Developer and Problem Solver.</span></p>
           </Landing>
         </Parallax>
-        <ContentLight>
 
-          <FlexContainer align={null}>
+        <ColorContainer color="primary">
 
-            <Right>
-              <StaticImage src="../images/intropic.jpg" alt="Kelsi Hoyle" />
-            </Right>
-            <Left>
-              <p>I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
-              <p>I love coding, learning, and creating products that my clients are proud of. I especially enjoy the challenge of coming up with creative solutions that save clients money in the long term.</p>
-              <PrimaryLink><Link to="/about">Learn more about me.</Link></PrimaryLink>
-            </Left>
+        <FlexContainer align={null}>
+          <Right>
+            <StaticImage src={"../images/intropic.jpg"} alt="Kelsi Hoyle" />
+          </Right>
+          <Left>
+            <p>I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
+            <p>I love coding, learning, and creating products that my clients are proud of. I especially enjoy the challenge of coming up with creative solutions that save clients money in the long term.</p>
+            <PrimaryLink><Link to="/about">Learn more about me.</Link></PrimaryLink>
+          </Left>
 
-          </FlexContainer>
-        </ContentLight>
+        </FlexContainer>
+        </ColorContainer>
 
-        <ColorContainer color="yellow">
+
+        <ColorContainer color="light">
           <h2>Portfolio</h2>
           <FlexContainer align="center">
             {items.map(({ node: item }) => (
@@ -66,7 +66,10 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
           </Btn>
         </ColorContainer>
 
-        <Contact />
+        <ColorContainer color="yellow">
+          <h2>Contact</h2>
+          <ContactComponent />
+        </ColorContainer>
       </main>
     </>
   )

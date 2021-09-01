@@ -28,8 +28,8 @@ export const BG = styled.div`
 export const ColorContainer = styled.div`
     width: 100vw;
     padding: 5vh 0;
-    margin: 10vh auto;
-    background-color: ${props => colors[props.color]}
+    margin: auto;
+    background-color: ${props => props.color ? colors[props.color] : 'white' }
 `
 
 type FlexContainerProps = {
@@ -37,6 +37,7 @@ type FlexContainerProps = {
 }
 
 export const FlexContainer = styled.div<FlexContainerProps>`
+    margin: 50px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -59,7 +60,7 @@ export const Left = styled.div`
 
 export const Right = styled.div`
     width: 35%;
-    height: 500px;
+    height: auto;
     padding-left: 5%;
     position: relative;
 

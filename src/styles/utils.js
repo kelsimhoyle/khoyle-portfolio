@@ -51,10 +51,12 @@ p {
 }
 
 h2 {
-    // font-family: 'BioRhyme', serif;
+    font-family: 'BioRhyme', serif;
+    font-weight: bold;
     font-size: 28px;
     line-height: 1.5;
     text-align: center;
+    margin: 10px 0;
 }
 
 h3 {

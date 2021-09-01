@@ -1,7 +1,8 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import "@fontsource/montserrat";
-import "../styles/reset.css"
+import "@fontsource/biorhyme";
+import "../styles/reset.css";
 
 import { GlobalStyle } from "../styles/utils";
 
