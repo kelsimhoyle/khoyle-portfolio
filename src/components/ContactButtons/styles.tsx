@@ -6,7 +6,7 @@ display: flex;
     flex-direction: row;
     align-items: center;
     align-contact: center;
-width: 100%;
+    width: 100%;
 
 justify-content: space-evenly;
        a {

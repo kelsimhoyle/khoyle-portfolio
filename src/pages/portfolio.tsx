@@ -2,7 +2,7 @@ import React from "react";
 import { PageProps, graphql } from "gatsby";
 import Parallax from "../components/Parallax";
 import PortfolioItem from "../components/PortfolioItem";
-import { ContentLight, Landing } from "../styles";
+import { ContentLight, Landing, PortfolioContainer } from "../styles";
 
 import bg from "../images/laptop.jpg"
 import Seo from "../components/Seo";
@@ -23,12 +23,14 @@ const Portfolio: React.FC<PageProps<any>> = ({ data }) => {
           <p>This is where I get to brag. Although I am proud of the work that I have done on the listed websites, I am mostly proud of the amount of money that I have saved for these small businesses.</p>
           <p>Through fun problem solving, and a lot of work on my end, I was able to come up with sustainable solutions that have brought down the monthly maintence cost of these businesses. Through custom CMS and just plain old JavaScript coding, I was able to get clients off of relying on multiple expensive platforms to run their businesses.</p>
         </ContentLight>
+        <PortfolioContainer>
         {items.map(({ node: item }) => (
           <PortfolioItem
             data={item.data}
             home={false}
           />
         ))}
+        </PortfolioContainer>
       </main>
     </>
   );
@@ -46,7 +48,7 @@ export const PortfolioQuery = graphql`{
                 Image {
                   localFiles {
                     childImageSharp {
-                      gatsbyImageData
+                      gatsbyImageData (width: 900)
                     }
                   }
                 }

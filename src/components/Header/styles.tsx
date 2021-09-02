@@ -56,12 +56,16 @@ export const Navbar = {
         top: 0;
         left: 0;
         transition: transform 0.3s ease-in-out;
+        .mobile {
+            display: block;
+            padding: 20px 0;
+        }
 
         transform: ${props =>
             props.openDrawer ? `translateX(0)` : `translateX(-100%)`};
         }
 
-        
+
     }
     `,
     Item: styled.li`

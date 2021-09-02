@@ -42,7 +42,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
             </ImgContent.ImgContainer>
             <ImgContent.Content>
             <h3>I am Kelsi. 👋 </h3>
-              <p>I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
+              <p>I am a Denver based full-stack web developer. I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
               <p>I love coding, learning, and creating products that my clients are proud of. I especially enjoy the challenge of coming up with creative solutions that save clients money in the long term.</p>
               <PrimaryLink><Link to="/about">Learn more about me.</Link></PrimaryLink>
             </ImgContent.Content>

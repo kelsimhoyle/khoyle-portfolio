@@ -29,7 +29,7 @@ export const ColorContainer = styled.div`
     width: 100vw;
     padding: 5vh 0;
     margin: auto;
-    background-color: ${props => props.color ? colors[props.color] : 'white' }
+    background-color: ${props => props.color ? colors[props.color] : 'white'}
 `
 
 type FlexContainerProps = {
@@ -143,13 +143,14 @@ export const Content = styled.div`
 `
 
 export const ContentLight = styled.div`
-    background-color: ${colors.light};
+    background-color: ${colors.primaryLight};
     padding: 5% 10%;
 
     p {
       margin: 10px;
-      line-height: 1.25;
+      line-height: 1.5;
     }
+
 
     ${breakpoints("padding", "%", [
   { 1200: 5 },
@@ -163,50 +164,65 @@ export const PageContent = styled.div`
     margin: 2% auto;
 `
 
-export const Grid = styled.div`
+export const Grid = {
+
+  Container: styled.div`
     width: 100vw;
     display: flex;
     flex-align: row;
     margin: 4% 0;
 
     ${breakpoints("flex-direction", "", [
-  { 800: "column" },
-  { 600: "column" },
-  { 450: "column" }
-])};
+    { 800: "column" },
+    { 600: "column" },
+    { 450: "column" }
+  ])};
+
+`,
+ImgDiv: styled.div`
+    width: 60%;
+    overflow: hidden;
 
 
-    div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 40%;
-        height: auto;
-        padding: 5%;
-        text-align: center;
-        color: ${colors.primary};
-        background-color: ${colors.light};
-        position: relative;
+    ${breakpoints("width", "%", [
+      { 800: "100" },
+      { 600: "100" },
+      { 450: "100" }
+    ])};
+`,
+  TextDiv: styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: auto;
+  padding: 5%;
+  text-align: center;
+  background-color: ${colors.primaryLight};
+  position: relative;
+  line-height: 1.5;
 
-    }
- 
-    .text {
-        ${breakpoints("width", "%", [
-  { 1200: 50 },
-  { 800: 95 },
-  { 600: 95 },
-  { 450: 98 }
-])};
+  ${breakpoints("width", "%", [
+    { 800: "100" },
+    { 600: "100" },
+    { 450: "100" }
+  ])};
+  p {
+    margin: 10px 0;
+  }
 
-        ${breakpoints("padding", "%", [
-  { 800: 2.5 },
-  { 600: 2.5 },
-  { 450: 1 }
-])};
-    }
+  .text {
+    ${breakpoints("width", "%", [
+    { 1200: 50 },
+    { 800: 95 },
+    { 600: 95 },
+    { 450: 98 }
+  ])};
 
 `
-
+}
 
 export const PrimaryLink = styled.span`
     padding: 4px;
@@ -356,24 +372,21 @@ export const ImgContent = {
     position: relative;
     padding: 5vh 15vw;
     ${breakpoints("padding", "", [
-      { 800: "2.5vh 2.5vw" },
-      { 600: "2.5vh 2.5vw" },
-      { 450: "2.5vh 2.5vw"}
-    ])};
-
+    { 800: "2.5vh 2.5vw" },
+    { 600: "2.5vh 2.5vw" },
+    { 450: "2.5vh 2.5vw" }
+  ])};
     @media only screen and (max-width: 40em) {
-      height: 100vh;
+      height: 115vh;
     }
-
   `,
   ImgContainer: styled.div`
     width: 450px;
-
     ${breakpoints("width", "vw", [
-      { 800: "95" },
-      { 600: "95" },
-      { 450: "95" }
-    ])};
+    { 800: "95" },
+    { 600: "95" },
+    { 450: "95" }
+  ])};
   `,
   Content: styled.div`
     position: absolute;
@@ -386,23 +399,20 @@ export const ImgContent = {
     -moz-box-shadow: 0px 3px 3px #808080;
     -webkit-box-shadow: 0px 3px 3px #808080; 
     box-shadow: 0px 3px 3px #808080;
-
     h3 {
       margin: 0 10px
     }
-    p {
+    p, a {
       margin: 10px;
       line-height: 1.25;
     }
-
 
     @media only screen and (max-width: 40em) {
       width: 85%;
       height: fit-content;
       top: 55%;
       left: 5%;
-      padding: 2.5%;
-
+      padding: 5% 2.5%;
       p {
         font-size: 1rem;
       }
@@ -410,3 +420,12 @@ export const ImgContent = {
     
   `
 }
+
+export const PortfolioContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  padding: 2.5%;
+`

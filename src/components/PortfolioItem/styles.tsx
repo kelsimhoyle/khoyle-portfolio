@@ -30,8 +30,7 @@ export const PortItem = styled.div<PortItem>`
         { 450: "column" }
       ])};
 
-    p,
-     a {
+    p {
         margin: 5px auto;
         line-height: 1.25
     }
@@ -43,5 +42,9 @@ export const PortItem = styled.div<PortItem>`
     .image,
     .about {
         margin: 20px;
+    }
+
+    .image {
+        width: ${({home}) => home ? "95%" : "900px"};
     }
 `
