@@ -29,7 +29,8 @@ export const ColorContainer = styled.div`
     width: 100vw;
     padding: 5vh 0;
     margin: auto;
-    background-color: ${props => props.color ? colors[props.color] : 'white'}
+    background-color: ${props => props.color ? colors[props.color] : 'white'};
+    text-align: center;
 `
 
 type FlexContainerProps = {

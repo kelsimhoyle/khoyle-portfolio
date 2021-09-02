@@ -1,10 +1,10 @@
 import React from "react";
 import { PageProps, graphql } from "gatsby";
-import Parallax from "../components/Parallax";
+// import Parallax from "../components/Parallax";
 import PortfolioItem from "../components/PortfolioItem";
 import { ContentLight, Landing, PortfolioContainer } from "../styles";
 
-import bg from "../images/laptop.jpg"
+// import bg from "../images/laptop.jpg"
 import Seo from "../components/Seo";
 
 const Portfolio: React.FC<PageProps<any>> = ({ data }) => {
@@ -14,12 +14,13 @@ const Portfolio: React.FC<PageProps<any>> = ({ data }) => {
     <>
       <Seo title="Kelsi Hoyle - Portfolio" />
       <div>
-        <Parallax background={bg} height="40vh">
+        {/* <Parallax background={bg} height="40vh">
           <Landing>
             <h2>Portfolio</h2>
           </Landing>
-        </Parallax>
+        </Parallax> */}
         <ContentLight>
+          <h2>Portfolio</h2>
           <p>This is where I get to brag. Although I am proud of the work that I have done on the listed websites, I am mostly proud of the amount of money that I have saved for these small businesses.</p>
           <p>Through fun problem solving, and a lot of work on my end, I was able to come up with sustainable solutions that have brought down the monthly maintence cost of these businesses. Through custom CMS and just plain old JavaScript coding, I was able to get clients off of relying on multiple expensive platforms to run their businesses.</p>
         </ContentLight>

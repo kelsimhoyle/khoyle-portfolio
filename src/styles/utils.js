@@ -56,7 +56,7 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-h2 {
+h1, h2 {
     font-family: 'BioRhyme', serif;
     font-weight: bold;
     font-size: 28px;

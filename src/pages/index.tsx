@@ -1,13 +1,10 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import {  getImage, GatsbyImage } from "gatsby-plugin-image";
 import { PageProps, Link, graphql } from "gatsby";
 import Seo from "../components/Seo";
-import Parallax from "../components/Parallax";
+// import Parallax from "../components/Parallax";
 import {
   FlexContainer,
-  Left,
-  Right,
-  Landing,
   PrimaryLink,
   ItemContainer,
   ColorContainer,
@@ -17,32 +14,34 @@ import {
 import PortfolioItem from "../components/PortfolioItem";
 import ContactComponent from "../components/ContactComponent";
 
-
-import bg from "../images/mountain.jpg";
+// import bg from "../images/mountain.jpg"
 
 const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
-  const items = data.allAirtable.edges
+  const items = data.portfolio.edges;
+  const portrait = getImage(data.portrait);
 
   return (
     <>
       <Seo title="Kelsi Hoyle -- Full Stack Web Developer" />
       <div>
-        <Parallax background={bg} height="70vh">
+        {/* <Parallax background={bg} height="70vh">
           <Landing>
             <h2><span className="spaced">Hello! I'm Kelsi.</span></h2>
             <p><span className="line">Web Developer and Problem Solver.</span></p>
           </Landing>
-        </Parallax>
+        </Parallax> */}
 
         <ColorContainer color="primary">
+          <h1>Hello! 👋 I am Kelsi.  </h1>
+          <p>Full-stack web developer, based in Dever, Colorado.</p>
           <ImgContent.Container>
             <ImgContent.ImgContainer>
-              <StaticImage src="../images/mainpic.jpg" alt="Kelsi Hoyle" />
+              <GatsbyImage image={portrait} alt="Kelsi Hoyle" />
 
             </ImgContent.ImgContainer>
             <ImgContent.Content>
-            <h3>I am Kelsi. 👋 </h3>
-              <p>I am a Denver based full-stack web developer. I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
+            <h3>About Me</h3>
+              <p>I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
               <p>I love coding, learning, and creating products that my clients are proud of. I especially enjoy the challenge of coming up with creative solutions that save clients money in the long term.</p>
               <PrimaryLink><Link to="/about">Learn more about me.</Link></PrimaryLink>
             </ImgContent.Content>
@@ -77,7 +76,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
 }
 
 export const HomeQuery = graphql`{
-  allAirtable(filter: {table: {eq: "Portfolio"}, data: {Status: {eq: "Done"}}}) {
+  portfolio: allAirtable(filter: {table: {eq: "Portfolio"}, data: {Status: {eq: "Done"}}}) {
     edges {
       node {
         data {
@@ -101,6 +100,12 @@ export const HomeQuery = graphql`{
           Repo
         }
       }
+    }
+  }
+  portrait: file(relativePath: {eq: "mainpic.jpg"}) {
+    childImageSharp {
+      id
+      gatsbyImageData(width: 900)
     }
   }
 }
