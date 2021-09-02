@@ -32,31 +32,42 @@ export const Navbar = {
       padding: 0.25rem 1rem;
 
       @media only screen and (max-width: 40em) {
-          img {
+          .gatsby-image-wrapper img {
               height: 65px;
           }
       }
     `,
     Items: styled.ul<ItemProps>`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: white;
-    height: 100vh;
-    text-align: left;
-    padding: 2rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.3s ease-in-out;
-  
+    list-style: none;
+
+    .mobile {
+        display: none;
+    }
+
+    @media only screen and (max-width: 40em) {
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        height: 100vh;
+        text-align: left;
+        padding: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease-in-out;
+
         transform: ${props =>
-          props.openDrawer ? `translateX(0)` : `translateX(-100%)`};
-      }
+            props.openDrawer ? `translateX(0)` : `translateX(-100%)`};
+        }
+
+        
+    }
     `,
     Item: styled.li`
       padding: 0 1rem;
       cursor: pointer;
+      text-decoration: none;
   
       @media only screen and (max-width: 40em) {
         padding: 1rem 2rem;

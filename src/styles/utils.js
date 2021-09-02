@@ -69,4 +69,8 @@ h4 {
     font-size: 20px;
     font-weight: bold;
 }
+
+a {
+  text-decoration: none;
+}
 `

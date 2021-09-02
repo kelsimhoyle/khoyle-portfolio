@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image";
 import { MenuLinksType } from "../../layouts";
 import { Navbar, HamburgerButton } from "./styles";
+import { PrimaryLink } from "../../styles";
+import ContactButtons from "../ContactButtons";
 
 type HeaderProps = {
   siteTitle: string;
@@ -39,8 +41,10 @@ const Header = ({ menuLinks, siteTitle }: HeaderProps) => {
         </Link>
       </Navbar.Logo>
 
-      <HamburgerButton openDrawer={openDrawer}
-        onClick={() => toggleDrawer(true)}>
+      <HamburgerButton
+        onClick={() => toggleDrawer(!openDrawer)}
+        openDrawer={openDrawer}
+      >
         <div />
         <div />
         <div />
@@ -50,11 +54,13 @@ const Header = ({ menuLinks, siteTitle }: HeaderProps) => {
         {menuLinks.map(link => (
           <Navbar.Item>
             <Link to={link.link}>
-              {link.name}
+              <PrimaryLink>{link.name}</PrimaryLink>
             </Link>
           </Navbar.Item>
         ))}
-
+        <div className="mobile">
+          <ContactButtons />
+        </div>
       </Navbar.Items>
     </Navbar.Wrapper>
 
