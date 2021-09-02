@@ -32,7 +32,7 @@ const PortfolioItem = ({ pageContext }) => {
           </div>
         </div>
       </div>
-      <Btn>
+      <Btn size="large">
         <Link to="/portfolio">Back to Portfolio</Link>
       </Btn>
     </PortItemPage>

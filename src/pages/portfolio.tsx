@@ -13,7 +13,7 @@ const Portfolio: React.FC<PageProps<any>> = ({ data }) => {
   return (
     <>
       <Seo title="Kelsi Hoyle - Portfolio" />
-      <main>
+      <div>
         <Parallax background={bg} height="40vh">
           <Landing>
             <h2>Portfolio</h2>
@@ -31,7 +31,7 @@ const Portfolio: React.FC<PageProps<any>> = ({ data }) => {
           />
         ))}
         </PortfolioContainer>
-      </main>
+      </div>
     </>
   );
 };

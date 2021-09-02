@@ -9,23 +9,42 @@ export const StyledFooter = styled.footer`
      display: flex;
      flex-direction: row;
      justify-content: space-around;
+     align-items: center;
      background-color: ${colors.primaryLight};
 
     ${'' /* img {
          width: 10%;
          height: auto;
      } */}
+     .logo {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: between;
+
+         p {
+             margin: 20px;
+         }
+         
+        ${breakpoints("flex-direction", "", [
+            { 800: "row" },
+                ])};
+        .gatsby-image-wrapper img {
+            height: 175px;
+            ${breakpoints("height", "px", [
+                { 800: "100" },
+                    ])};
+        }
+     }
+
+     
 
      ${breakpoints("flex-direction", "", [
-
-    { 800: "column" },
-
-  ])};
-  ${breakpoints("height", "", [
-
-{ 800: "auto" },
-
-])};
+        { 800: "column" },
+        ])};
+    ${breakpoints("height", "", [
+        { 800: "auto" },
+            ])};
 `
 
 export const Explore = styled.div`

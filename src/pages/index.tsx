@@ -26,7 +26,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
   return (
     <>
       <Seo title="Kelsi Hoyle -- Full Stack Web Developer" />
-      <main>
+      <div>
         <Parallax background={bg} height="70vh">
           <Landing>
             <h2><span className="spaced">Hello! I'm Kelsi.</span></h2>
@@ -62,7 +62,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
               </ItemContainer>
             ))}
           </FlexContainer>
-          <Btn>
+          <Btn size="large">
             <Link to="/portfolio">View Full Portfolio</Link>
           </Btn>
         </ColorContainer>
@@ -71,7 +71,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
           <h2>Contact</h2>
           <ContactComponent />
         </ColorContainer>
-      </main>
+      </div>
     </>
   )
 }

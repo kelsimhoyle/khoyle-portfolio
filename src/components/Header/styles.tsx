@@ -19,7 +19,6 @@ export const Navbar = {
   
       background-color: white;
   
-      // 40em == 640px
       @media only screen and (max-width: 40em) {
         position: fixed;
         width: 100vw;
@@ -33,7 +32,7 @@ export const Navbar = {
 
       @media only screen and (max-width: 40em) {
           .gatsby-image-wrapper img {
-              height: 65px;
+              height: 50px;
           }
       }
     `,
@@ -88,8 +87,8 @@ export const HamburgerButton = styled.button<HamburgerButtonProps>`
 
     @media only screen and (max-width: 40em) {
         position: absolute;
-        top: 1rem;
-        left: 5%;
+        top: 2rem;
+        left: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

@@ -55,21 +55,11 @@ const Layout = ({ children }: LayoutPropsInterface) => {
           siteTitle={siteTitle}
           menuLinks={menuLinks}
         />      
-
         <main>{children}</main>
         <Footer
           siteTitle={data.site.siteMetadata.title}
           menuLinks={data.site.siteMetadata.menuLinks}
         />
-        {/* <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer> */}
     </>
   )
 }

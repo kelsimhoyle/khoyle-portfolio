@@ -33,15 +33,21 @@ export const colors = {
 export const GlobalStyle = createGlobalStyle`
   p {
     ${breakpoints("font-size", "px", [
-    { 1200: 18 },
-    { 800: 16 },
-    { 600: 14 },
-    { 450: 14 }
-  ])};
+      { 1200: 18 },
+      { 800: 16 },
+      { 600: 14 },
+      { 450: 14 }
+    ])};
   }
 
   body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    ${breakpoints("margin-top", "px", [
+      { 800: 100 },
+      { 600: 100 },
+      { 450: 100 }
+    ])};
 }
 
 p {

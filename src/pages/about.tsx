@@ -9,8 +9,6 @@ const About = () => {
     return (
         <>
             <Seo title="Kelsi Hoyle - About" />
-            <main>
-
                 <Grid.Container>
                     <Grid.ImgDiv>
                         <StaticImage src="../images/fall.jpeg" alt="me" />
@@ -24,7 +22,6 @@ const About = () => {
                         <ContactButtons />
                     </Grid.TextDiv>
                 </Grid.Container>
-            </main>
         </>
     );
 };

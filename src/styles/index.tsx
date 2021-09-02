@@ -43,9 +43,14 @@ export const FlexContainer = styled.div<FlexContainerProps>`
     flex-wrap: wrap;
     align-items: center;
     justify-content: ${props => props.align ? "center" : "flex-start"};
+
     ${breakpoints("flex-direction", "", [
-  { 800: "column" }
-])};
+      { 800: "column" }
+    ])};
+
+    ${breakpoints("margin-top", "", [
+      { 800: "0" }
+    ])};
 `
 
 export const Left = styled.div`
@@ -78,22 +83,23 @@ export const Landing = styled.div`
     width: 50vw;
     text-align: center;
     background-color: ${colors.primaryLight};
-    ${breakpoints("margin-top", "%", [
-  { 800: "30" }
-])};
-    ${breakpoints("width", "vw", [
-  { 800: "90" }
-])};
 
-  ${breakpoints("padding", "", [
-  { 800: "1% 5%" }
-])};
+      ${breakpoints("margin-top", "%", [
+        { 800: "30" }
+        ])};
+      ${breakpoints("width", "vw", [
+        { 800: "100" }
+        ])};
 
-h2 {
-  ${breakpoints("font-size", "px", [
-  { 800: "24" }
-])};
-}
+    ${breakpoints("padding", "", [
+        { 800: "5% 1%" }
+        ])};
+
+    h2 {
+      ${breakpoints("font-size", "px", [
+          { 800: "24" }
+          ])};
+    }
 
     p {
   line-height: 0.25;
@@ -112,6 +118,10 @@ h2 {
   border-top: 1px solid ${colors.secondary};
   top: 0;
   width: 75px;
+
+  ${breakpoints("width", "px", [
+    { 800: "40" }
+    ])};
 }
 .line:before {
   right: 100%;
@@ -180,7 +190,7 @@ export const Grid = {
 
 `,
 ImgDiv: styled.div`
-    width: 60%;
+    width: 50%;
     overflow: hidden;
 
 
@@ -196,9 +206,9 @@ ImgDiv: styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 50%;
+  padding: 0 5%;
   height: auto;
-  padding: 5%;
   text-align: center;
   background-color: ${colors.primaryLight};
   position: relative;
@@ -225,8 +235,8 @@ ImgDiv: styled.div`
 }
 
 export const PrimaryLink = styled.span`
-    padding: 4px;
-    margin: 0% 5%;
+    padding: 8px 8px;
+    margin: 2% 5%;
     border-bottom: 3px solid ${colors.secondary};
     font-size: 20px;
     margin: auto;
@@ -234,10 +244,12 @@ export const PrimaryLink = styled.span`
     color: ${colors.primary};
     a {
         text-decoration: none;
+        padding: 5px;
+       
     }
     a:hover {
     color: white;
-    background-color: ${colors.primaryLight};
+    background-color: ${colors.yellow};
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     -khtml-border-radius: 3px;
@@ -299,8 +311,12 @@ export const ItemContainer = styled.div`
 ])};
 `
 
-export const Btn = styled.div`
-    font-size: 1.5rem;
+type BtnProps = {
+  size: string;
+}
+
+export const Btn = styled.div<BtnProps>`
+    font-size: ${({size} )=> size === "small" ? "1rem" : "1.5rem"};
     border: none;
     background-color: transparent;
     font-family: inherit;
@@ -342,7 +358,8 @@ export const Btn = styled.div`
 
 
     a {
-      padding: 20px 30px;
+      padding: ${({size} )=> size === "small" ? "10px 20px" : "20px 30px"};
+  
       color: white;
       text-decoration: none;
     }
@@ -359,7 +376,7 @@ export const HightLightedH3 = styled.h3`
 }
 `
 
-export const ContactPage = styled.main`
+export const ContactPage = styled.div`
     height: 100vh;
     background-color: ${colors.yellow};
     display: flex;
@@ -410,7 +427,7 @@ export const ImgContent = {
     @media only screen and (max-width: 40em) {
       width: 85%;
       height: fit-content;
-      top: 55%;
+      top: 50%;
       left: 5%;
       padding: 5% 2.5%;
       p {

@@ -27,6 +27,12 @@ export const Form = styled.div`
         { 450: "fit-content" }
       ])};
 
+      ${breakpoints("width", "vw", [
+        { 800: "90" },
+        { 600: "90" },
+        { 450: "90" }
+      ])};
+
       .form {
           background-color: white;
           height: 100%;
