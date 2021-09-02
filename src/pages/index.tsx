@@ -37,7 +37,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
 
         <FlexContainer align={null}>
           <Right>
-            <StaticImage src={"../images/intropic.jpg"} alt="Kelsi Hoyle" />
+            <StaticImage src="../images/mainpic.jpg" alt="Kelsi Hoyle" />
           </Right>
           <Left>
             <p>I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>

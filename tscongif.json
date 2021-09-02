@@ -12,7 +12,8 @@
       "skipLibCheck": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
-      "removeComments": false
+      "removeComments": false,
+      "typeRoots" : ["node_modules/@types", "src/types"]
     },
     "include": ["./src/**/*"]
   }
