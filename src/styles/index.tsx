@@ -350,3 +350,63 @@ export const ContactPage = styled.main`
     align-items: center;
     justify-content: center;
 `
+
+export const ImgContent = {
+  Container: styled.div`
+    position: relative;
+    padding: 5vh 15vw;
+    ${breakpoints("padding", "", [
+      { 800: "2.5vh 2.5vw" },
+      { 600: "2.5vh 2.5vw" },
+      { 450: "2.5vh 2.5vw"}
+    ])};
+
+    @media only screen and (max-width: 40em) {
+      height: 100vh;
+    }
+
+  `,
+  ImgContainer: styled.div`
+    width: 450px;
+
+    ${breakpoints("width", "vw", [
+      { 800: "95" },
+      { 600: "95" },
+      { 450: "95" }
+    ])};
+  `,
+  Content: styled.div`
+    position: absolute;
+    top: 35%;
+    left: 575px;
+    width: 50%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    -moz-box-shadow: 0px 3px 3px #808080;
+    -webkit-box-shadow: 0px 3px 3px #808080; 
+    box-shadow: 0px 3px 3px #808080;
+
+    h3 {
+      margin: 0 10px
+    }
+    p {
+      margin: 10px;
+      line-height: 1.25;
+    }
+
+
+    @media only screen and (max-width: 40em) {
+      width: 85%;
+      height: fit-content;
+      top: 55%;
+      left: 5%;
+      padding: 2.5%;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+    
+  `
+}

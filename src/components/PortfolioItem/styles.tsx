@@ -17,7 +17,7 @@ type PortItem = {
 }
 
 export const PortItem = styled.div<PortItem>`
-    width: 80%;
+    width: 95%;
     margin: ${props => props.home ? "10px" : "20px"} auto;
     display: flex;
     flex-direction: ${props => props.home ? "column" : "row"};

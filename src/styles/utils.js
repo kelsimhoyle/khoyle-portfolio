@@ -35,8 +35,8 @@ export const GlobalStyle = createGlobalStyle`
     ${breakpoints("font-size", "px", [
     { 1200: 18 },
     { 800: 16 },
-    { 600: 16 },
-    { 450: 16 }
+    { 600: 14 },
+    { 450: 14 }
   ])};
   }
 
