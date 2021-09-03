@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { breakpoints, colors } from "../../styles/utils";
+// import { breakpoints, colors } from "../../styles/utils";
 
 type ItemProps = {
-    openDrawer: boolean;
+  openDrawer: boolean;
 }
 
 export const Navbar = {
-    Wrapper: styled.nav`
+  Wrapper: styled.nav`
         box-sizing: border-box;
       flex: 1;
       align-self: flex-start;
@@ -27,7 +27,7 @@ export const Navbar = {
         justify-content: flex-end;
       }
     `,
-    Logo: styled.h1`
+  Logo: styled.h1`
       padding: 0.25rem 1rem;
 
       @media only screen and (max-width: 40em) {
@@ -36,7 +36,7 @@ export const Navbar = {
           }
       }
     `,
-    Items: styled.ul<ItemProps>`
+  Items: styled.ul<ItemProps>`
     display: flex;
     list-style: none;
 
@@ -61,13 +61,13 @@ export const Navbar = {
         }
 
         transform: ${props =>
-            props.openDrawer ? `translateX(0)` : `translateX(-100%)`};
+      props.openDrawer ? `translateX(0)` : `translateX(-100%)`};
         }
 
 
     }
     `,
-    Item: styled.li`
+  Item: styled.li`
       padding: 0 1rem;
       cursor: pointer;
       text-decoration: none;
@@ -76,19 +76,15 @@ export const Navbar = {
         padding: 1rem 2rem;
       }
     `
-  };
+};
 
-  type HamburgerButtonProps = {
-    openDrawer: boolean
-  }
+type HamburgerButtonProps = {
+  openDrawer: boolean
+}
 
 export const HamburgerButton = styled.button<HamburgerButtonProps>`
-    display: none;
 
-    @media only screen and (max-width: 40em) {
-        position: absolute;
-        top: 2rem;
-        left: 2rem;
+        
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -97,8 +93,6 @@ export const HamburgerButton = styled.button<HamburgerButtonProps>`
         background: transparent;
         border: none;
         cursor: pointer;
-        padding: 0;
-        z-index: 10;
     
         &:focus {
         outline: none;
@@ -126,6 +120,20 @@ export const HamburgerButton = styled.button<HamburgerButtonProps>`
             transform: ${({ openDrawer }) => openDrawer ? 'rotate(-45deg)' : 'rotate(0)'};
         }
         }
-      }
 
 `;
+
+export const HamburgerContainer = styled.div`
+  display: none;
+  padding: 1rem;
+
+  @media only screen and (max-width: 40em) {
+    display: block;
+    position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 20;
+
+  }
+
+`

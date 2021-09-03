@@ -1,24 +1,32 @@
 import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MenuLinksType } from "../../layouts";
-import { Navbar, HamburgerButton } from "./styles";
+import { Navbar, HamburgerButton, HamburgerContainer } from "./styles";
 import { PrimaryLink } from "../../styles";
 import ContactButtons from "../ContactButtons";
+import { FaGlasses } from "react-icons/fa";
 
 type HeaderProps = {
   siteTitle: string;
   menuLinks: MenuLinksType[];
+  logo: any;
 }
 
-const Header = ({ menuLinks, siteTitle }: HeaderProps) => {
+const Header = ({ menuLinks, siteTitle, logo }: HeaderProps) => {
   const [openDrawer, toggleDrawer] = useState(false);
   const drawerRef = useRef(null);
+  const toggleRef = useRef(null);
 
   useEffect(() => {
     /* Close the drawer when the user clicks outside of it */
-    const closeDrawer = event => {
-      if (drawerRef.current && drawerRef.current.contains(event.target)) {
+    const closeDrawer = (event: MouseEvent) => {
+      if (toggleRef.current && toggleRef.current.contains(event.target)) {
+        console.log("HERE")
+        console.log(openDrawer)
+        return toggleDrawer(prev => !prev)
+      } else if (drawerRef.current && drawerRef.current.contains(event.target)) {
+        console.log("NOW HERE")
         return;
       }
 
@@ -33,22 +41,25 @@ const Header = ({ menuLinks, siteTitle }: HeaderProps) => {
     <Navbar.Wrapper>
       <Navbar.Logo>
         <Link to="/">
-          <StaticImage
-            src="../../images/1.png"
-            height={100}
+          <GatsbyImage
+            image={getImage(logo)}
             alt={siteTitle}
+            objectFit="contain"
           />
         </Link>
       </Navbar.Logo>
+      <HamburgerContainer ref={toggleRef}
 
-      <HamburgerButton
-        onClick={() => toggleDrawer(!openDrawer)}
-        openDrawer={openDrawer}
       >
-        <div />
-        <div />
-        <div />
-      </HamburgerButton>
+        <HamburgerButton
+          openDrawer={openDrawer}
+          name="Menu"
+        >
+          <div />
+          <div />
+          <div />
+        </HamburgerButton>
+      </HamburgerContainer>
 
       <Navbar.Items ref={drawerRef} openDrawer={openDrawer}>
         {menuLinks.map(link => (

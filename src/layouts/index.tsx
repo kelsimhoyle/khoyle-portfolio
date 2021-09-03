@@ -8,8 +8,6 @@ import { GlobalStyle } from "../styles/utils";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { siteMetadata } from "../../gatsby-config";
-import { StringDecoder } from "string_decoder";
 // import "./layout.css"
 
 interface LayoutPropsInterface {
@@ -17,23 +15,25 @@ interface LayoutPropsInterface {
 }
 
 export type MenuLinksType = {
-    name: string;
-    link: string;
+  name: string;
+  link: string;
 }
 
 type DataType = {
-    site: {
-      siteMetadata: {
-        title: string;
-        menuLinks: MenuLinksType[];
-      }
+  siteData: {
+    siteMetadata: {
+      title: string;
+      menuLinks: MenuLinksType[];
     }
+  }
+  headerLogo: any;
+  footerLogo: any;
 }
 
 const Layout = ({ children }: LayoutPropsInterface) => {
   const data: DataType = useStaticQuery(graphql`
   query SiteTitleQuery {
-    site {
+    siteData: site {
       siteMetadata {
         title
         menuLinks {
@@ -42,24 +42,38 @@ const Layout = ({ children }: LayoutPropsInterface) => {
        }
       }
     }
+    headerLogo: file(relativePath: {eq: "1.png"}) {
+      childImageSharp {
+        gatsbyImageData(height: 100)
+      }
+    }
+    footerLogo: file(relativePath: {eq: "2.png"}) {
+      childImageSharp {
+        gatsbyImageData(height: 100)
+      }
+    }
   }
   `)
 
-  const siteTitle: string = data.site.siteMetadata?.title || `Title`;
-  const menuLinks: MenuLinksType[] = data.site.siteMetadata.menuLinks;
+  const siteTitle: string = data.siteData.siteMetadata?.title || `Title`;
+  const menuLinks: MenuLinksType[] = data.siteData.siteMetadata.menuLinks;
+  const headerLogo: any = data.headerLogo;
+  const footerLogo: any = data.footerLogo;
 
   return (
     <>
       <GlobalStyle />
-        <Header
-          siteTitle={siteTitle}
-          menuLinks={menuLinks}
-        />      
-        <main>{children}</main>
-        <Footer
-          siteTitle={data.site.siteMetadata.title}
-          menuLinks={data.site.siteMetadata.menuLinks}
-        />
+      <Header
+        siteTitle={siteTitle}
+        menuLinks={menuLinks}
+        logo={headerLogo}
+      />
+      <main>{children}</main>
+      <Footer
+        siteTitle={siteTitle}
+        menuLinks={menuLinks}
+        logo={footerLogo}
+      />
     </>
   )
 }

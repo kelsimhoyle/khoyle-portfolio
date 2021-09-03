@@ -12,10 +12,10 @@ export const StyledFooter = styled.footer`
      align-items: center;
      background-color: ${colors.primaryLight};
 
-    ${'' /* img {
-         width: 10%;
-         height: auto;
-     } */}
+     & > div {
+         margin-top: 2rem;
+     }
+
      .logo {
          display: flex;
          flex-direction: column;

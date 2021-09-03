@@ -27,4 +27,8 @@ justify-content: space-evenly;
     a:visited {
         color: ${colors.secondary};
     }
+
+    a > span  {
+        display: none;
+    }
 `

@@ -395,7 +395,7 @@ export const ImgContent = {
     { 450: "2.5vh 2.5vw" }
   ])};
     @media only screen and (max-width: 40em) {
-      height: 115vh;
+      height: 100vh;
     }
   `,
   ImgContainer: styled.div`
