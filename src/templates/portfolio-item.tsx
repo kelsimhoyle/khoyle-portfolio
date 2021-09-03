@@ -15,7 +15,12 @@ const PortfolioItem = ({ pageContext }) => {
         <div className="text">
           <div>
             <HightLightedH3>{Name}</HightLightedH3>
-            <p>{Notes}</p>
+            <div
+                className="goals"
+                dangerouslySetInnerHTML={{
+                  __html: Notes.childMarkdownRemark.html,
+                }}
+              />
           </div>
           {Goals && (
             <div>
@@ -27,7 +32,6 @@ const PortfolioItem = ({ pageContext }) => {
                 }}
               />
             </div>
-
           )}
           <div>
             <HightLightedH3>Technologies:</HightLightedH3>
