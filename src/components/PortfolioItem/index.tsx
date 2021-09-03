@@ -1,8 +1,8 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { PrimaryLink, HightLightedH3, Btn } from "../../styles";
-import { Cats, PortItem, BtnFlex } from "./styles";
+import { PrimaryLink, HightLightedH3, Btn, BtnFlex } from "../../styles";
+import { PortItem} from "./styles";
 
 type PorfolioItemType = {
     data: any;
@@ -14,9 +14,8 @@ const PortfolioItem = ({ data, home }: PorfolioItemType) => {
 
     return (
         <PortItem home={home}>
-            {/* <div className={home ? "home" : "null"}> */}
-            <div className="image">
-                <GatsbyImage image={getImage(Image.localFiles[0])} alt={Name} />
+            <div className="image-div">
+                <GatsbyImage image={getImage(Image.localFiles[0])} alt={Name} objectFit="contain" />
                 <BtnFlex>
                     {Deployed && (
                         <Btn size="small">
@@ -32,15 +31,19 @@ const PortfolioItem = ({ data, home }: PorfolioItemType) => {
             </div>
             <div className="about">
                 <HightLightedH3>{Name}</HightLightedH3>
-                <p>{Notes}</p>
+                <div
+                className="goals"
+                dangerouslySetInnerHTML={{
+                  __html: Notes.childMarkdownRemark.html,
+                }}
+              />
                 <h4>Technologies:</h4>
-                <Cats>{Category.map(cat => <div><p>{cat}</p></div>)}</Cats>
+                <p>{Category.map(cat => ` ${cat} /`)}</p>
                
                 <PrimaryLink>
                     <Link to={`/portfolio/${Slug}`}>Learn More</Link>
                 </PrimaryLink>
             </div>
-            {/* </div> */}
         </PortItem>
     );
 };

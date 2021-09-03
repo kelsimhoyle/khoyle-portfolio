@@ -12,7 +12,11 @@ exports.createPages = async ({ graphql, actions }) => {
                  Name
                  Slug
                  Category
-                 Notes
+                 Notes {
+                  childMarkdownRemark {
+                    html
+                  }
+                 }
                  Image {
                    localFiles {
                      childImageSharp {

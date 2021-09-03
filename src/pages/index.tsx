@@ -1,5 +1,5 @@
 import * as React from "react";
-import {  getImage, GatsbyImage } from "gatsby-plugin-image";
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { PageProps, Link, graphql } from "gatsby";
 import Seo from "../components/Seo";
 // import Parallax from "../components/Parallax";
@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
 
   return (
     <>
-      <Seo title="Kelsi Hoyle -- Full Stack Web Developer" />
+      <Seo title="Kelsi Hoyle - Full Stack Web Developer" />
       <div>
         {/* <Parallax background={bg} height="70vh">
           <Landing>
@@ -32,15 +32,17 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
         </Parallax> */}
 
         <ColorContainer color="primary">
-          <h1>Hello! 👋 I am Kelsi.  </h1>
-          <p>Full-stack web developer, based in Dever, Colorado.</p>
+          <div className="landing">
+            <h1>Hello! 👋 I am Kelsi.  </h1>
+            <p>Full-stack web developer, based in Dever, Colorado.</p>
+          </div>
           <ImgContent.Container>
             <ImgContent.ImgContainer>
               <GatsbyImage image={portrait} alt="Kelsi Hoyle" />
 
             </ImgContent.ImgContainer>
             <ImgContent.Content>
-            <h3>About Me</h3>
+              <h3>About Me</h3>
               <p>I started coding as a fun hobby, and it turned into a passionate career. I took a leap of faith and earned my Full-Stack Web Development certificate from the University of Denver in 2019. Ever since, I have been creating and continuously learning to better my craft.</p>
               <p>I love coding, learning, and creating products that my clients are proud of. I especially enjoy the challenge of coming up with creative solutions that save clients money in the long term.</p>
               <PrimaryLink><Link to="/about">Learn more about me.</Link></PrimaryLink>
@@ -76,14 +78,21 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
 }
 
 export const HomeQuery = graphql`{
-  portfolio: allAirtable(filter: {table: {eq: "Portfolio"}, data: {Status: {eq: "Done"}}}) {
+  portfolio: allAirtable(
+    filter: {table: {eq: "Portfolio"}, data: {Status: {eq: "Done"}}}
+    sort: {fields: data___ID}
+  ) {
     edges {
       node {
         data {
           Name
           Slug
           Category
-          Notes
+          Notes {
+            childMarkdownRemark {
+              html
+            }
+          }
           Image {
             localFiles {
               childImageSharp {

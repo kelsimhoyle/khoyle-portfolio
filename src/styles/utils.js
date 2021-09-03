@@ -44,9 +44,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     ${breakpoints("margin-top", "px", [
-      { 800: 100 },
-      { 600: 100 },
-      { 450: 100 }
+      { 800: 75 },
+      { 600: 75 },
+      { 450: 75 }
     ])};
 }
 

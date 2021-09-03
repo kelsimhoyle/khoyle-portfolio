@@ -31,6 +31,10 @@ export const ColorContainer = styled.div`
     margin: auto;
     background-color: ${props => props.color ? colors[props.color] : 'white'};
     text-align: center;
+
+    .landing {
+      color: whitesmoke;
+    }
 `
 
 type FlexContainerProps = {
@@ -236,7 +240,7 @@ ImgDiv: styled.div`
 }
 
 export const PrimaryLink = styled.span`
-    padding: 8px 8px;
+    padding: 7px 2px;
     margin: 2% 5%;
     border-bottom: 3px solid ${colors.secondary};
     font-size: 20px;
@@ -447,4 +451,16 @@ export const PortfolioContainer = styled.div`
   justify-content: center;
   width: 95%;
   padding: 2.5%;
+`
+
+export const BtnFlex = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+
+    > div {
+        width: 45%;
+    }
 `

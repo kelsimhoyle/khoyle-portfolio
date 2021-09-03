@@ -10,6 +10,7 @@ export const PortItemPage = styled.main`
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 
     ${breakpoints("flex-direction", "", [
         { 800: "column" },

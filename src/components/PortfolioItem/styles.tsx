@@ -44,19 +44,8 @@ export const PortItem = styled.div<PortItem>`
         margin: 20px;
     }
 
-    .image {
-        width: ${({home}) => home ? "95%" : "70%"};
-    }
-`
-
-export const BtnFlex = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: stretch;
-
-    > div {
-        width: 45%;
+    .image-div {
+        width: ${({home}) => home ? "95%" : "80%"};
+        height: auto;
     }
 `

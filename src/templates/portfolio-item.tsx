@@ -1,6 +1,6 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { HightLightedH3, Btn } from "../styles";
+import { HightLightedH3, Btn, BtnFlex } from "../styles";
 import { PortItemPage } from "./portfolio-item.styles";
 import { Link } from "gatsby";
 
@@ -17,20 +17,36 @@ const PortfolioItem = ({ pageContext }) => {
             <HightLightedH3>{Name}</HightLightedH3>
             <p>{Notes}</p>
           </div>
-          <div>
-            <HightLightedH3>Goals:</HightLightedH3>
-            <div
-              className="goals"
-              dangerouslySetInnerHTML={{
-                __html: Goals.childMarkdownRemark.html,
-              }}
-            />
-          </div>
+          {Goals && (
+            <div>
+              <HightLightedH3>Goals:</HightLightedH3>
+              <div
+                className="goals"
+                dangerouslySetInnerHTML={{
+                  __html: Goals.childMarkdownRemark.html,
+                }}
+              />
+            </div>
+
+          )}
           <div>
             <HightLightedH3>Technologies:</HightLightedH3>
             <p>{Category.map(tech => ` ${tech} /`)}</p>
           </div>
+          <BtnFlex>
+            {Deployed && (
+              <Btn size="small">
+                <a href={Deployed} target="_blank">Visit Website</a>
+              </Btn>
+            )}
+            {Repo && (
+              <Btn size="small">
+                <a href={Repo} target="_blank">GitHub Repo</a>
+              </Btn>
+            )}
+          </BtnFlex>
         </div>
+
       </div>
       <Btn size="large">
         <Link to="/portfolio">Back to Portfolio</Link>
