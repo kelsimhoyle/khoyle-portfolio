@@ -325,6 +325,7 @@ export const Btn = styled.div<BtnProps>`
     cursor: pointer;
     margin: 5px auto;
     width: fit-content;
+    color: white;
 
     // Display
     display: flex;

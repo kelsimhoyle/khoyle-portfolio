@@ -11,7 +11,7 @@ export const Navbar = {
       flex: 1;
       align-self: flex-start;
   
-      padding: 1rem 3rem;
+      padding: .25rem 3rem;
   
       display: flex;
       justify-content: space-between;
@@ -31,6 +31,7 @@ export const Navbar = {
       padding: 0.25rem 1rem;
 
       @media only screen and (max-width: 40em) {
+          padding: 0;
           .gatsby-image-wrapper img {
               height: 50px;
           }

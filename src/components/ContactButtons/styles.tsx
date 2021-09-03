@@ -17,7 +17,7 @@ justify-content: space-evenly;
        } 
 
        a:hover {
-        color: white;
+        color: ${colors.yellow};
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
         -khtml-border-radius: 3px;

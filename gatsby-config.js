@@ -63,5 +63,14 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Kelsi Hoyle - Full Stack Web Developer`,
+        short_name: `Kelsi Hoyle`,
+        start_url: `/`,
+        icon: `src/images/2.png`,
+      },
+    },
   ],
 };
