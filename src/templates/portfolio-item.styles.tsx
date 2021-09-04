@@ -13,9 +13,21 @@ export const PortItemPage = styled.main`
     margin-bottom: 20px;
 
     ${breakpoints("flex-direction", "", [
-        { 800: "column" },
-        { 600: "column" },
-        { 450: "column" }
+      { 800: "column" },
+      { 600: "column" },
+      { 450: "column" }
+    ])};
+
+    ${breakpoints("width", "%", [
+      { 800: "95" },
+      { 600: "95" },
+      { 450: "95" }
+    ])};
+
+      ${breakpoints("margin", "", [
+        { 800: "auto" },
+        { 600: "auto" },
+        { 450: "auto" }
       ])};
    }
 
