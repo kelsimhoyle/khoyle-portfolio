@@ -7,7 +7,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "khoyle-portfolio",
+    title: "Portfolio",
     author: "Kelsi Hoyle",
     description: "Full Stack Web Developer based in Denver, Colorado.",
     menuLinks: [

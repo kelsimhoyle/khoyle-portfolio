@@ -33,6 +33,11 @@ export const PortItemPage = styled.main`
 
     .text {
         width: 70%;
+        ${breakpoints("width", "%", [
+          { 800: "95" },
+          { 600: "95" },
+          { 450: "95" }
+        ])};
       > div {
         margin: 15px 0;
       }
