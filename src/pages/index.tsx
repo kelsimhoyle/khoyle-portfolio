@@ -34,7 +34,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
         <ColorContainer color="primary">
           <div className="landing">
             <h1>Hello! 👋 I am Kelsi.  </h1>
-            <p>Full-stack web developer, based in Dever, Colorado.</p>
+            <p>Full-stack web developer, based in Denver, Colorado.</p>
           </div>
           <ImgContent.Container>
             <ImgContent.ImgContainer>
