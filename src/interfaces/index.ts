@@ -10,7 +10,7 @@ export interface PortfolioInterface {
     Image: {
         localFiles: any[]
     };
-    Goals: {
+    Goals?: {
         childMarkdownRemark: {
             html: string;
         }

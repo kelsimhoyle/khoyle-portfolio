@@ -23,5 +23,8 @@
         "@styles/*": ["src/styles/*"]
       }
     },
-    "include": ["./src/**/*"]
+    "include": [
+      "./src/**/*",
+      "./jest-setup.ts"
+    ]
   }

@@ -2,7 +2,7 @@ import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { PrimaryLink, HightLightedH3, Btn, BtnFlex } from "../../styles";
-import { PortItem} from "./styles";
+import { PortItem } from "./styles";
 
 import { PortfolioInterface } from "../../interfaces";
 
@@ -21,29 +21,30 @@ const PortfolioItem = ({ data, home }: PorfolioItemProps) => {
                 <BtnFlex>
                     {Deployed && (
                         <Btn size="small">
-                            <a href={Deployed} target="_blank">Visit Website</a>
+                            <a href={Deployed} target="_blank" data-testid="deployed">Visit Website</a>
                         </Btn>
                     )}
                     {Repo && (
                         <Btn size="small">
-                            <a href={Repo} target="_blank">GitHub Repo</a>
+                            <a href={Repo} target="_blank" data-testid="repo">GitHub Repo</a>
                         </Btn>
                     )}
                 </BtnFlex>
             </div>
             <div className="about" data-testid="about-div">
-                <HightLightedH3>{Name}</HightLightedH3>
+                <HightLightedH3 data-testid="title">{Name}</HightLightedH3>
                 <div
-                className="goals"
-                dangerouslySetInnerHTML={{
-                  __html: Notes.childMarkdownRemark.html,
-                }}
-              />
+                    className="goals"
+                    data-testid="about"
+                    dangerouslySetInnerHTML={{
+                        __html: Notes.childMarkdownRemark.html,
+                    }}
+                />
                 <h4>Technologies:</h4>
                 <p>{Category.map(cat => ` ${cat} /`)}</p>
-               
+
                 <PrimaryLink>
-                    <Link to={`/portfolio/${Slug}`}>Learn More</Link>
+                    <Link data-testid="slug" to={`/portfolio/${Slug}`}>Learn More</Link>
                 </PrimaryLink>
             </div>
         </PortItem>

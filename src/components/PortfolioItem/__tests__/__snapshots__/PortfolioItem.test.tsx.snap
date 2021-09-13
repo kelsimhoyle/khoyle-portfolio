@@ -68,7 +68,7 @@ exports[`Portfolio Item renders correctly 1`] = `
           data-gatsby-image-ssr=""
           data-main-image=""
           data-src="/static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png"
-          data-srcset="/static/dca7f4c406b8527e88de0adf9e17a894/d8461/NewWebsiteBlueMockupInstagram-Laptop3.png 225w,/static/dca7f4c406b8527e88de0adf9e17a894/d76bd/NewWebsiteBlueMockupInstagram-Laptop3.png 450w,/static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png 900w"
+          data-srcset="/static/dca7f4c406b8527e88de0adf9e17a894/d8461/NewWebsiteBlueMockupInstagram-Laptop3.png 225w, /static/dca7f4c406b8527e88de0adf9e17a894/d76bd/NewWebsiteBlueMockupInstagram-Laptop3.png 450w, /static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png 900w"
           data-testid="image"
           decoding="async"
           loading="lazy"
@@ -109,7 +109,7 @@ exports[`Portfolio Item renders correctly 1`] = `
             onLoad={[Function]}
             sizes="(min-width: 900px) 900px, 100vw"
             src="/static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png"
-            srcSet="/static/dca7f4c406b8527e88de0adf9e17a894/d8461/NewWebsiteBlueMockupInstagram-Laptop3.png 225w,/static/dca7f4c406b8527e88de0adf9e17a894/d76bd/NewWebsiteBlueMockupInstagram-Laptop3.png 450w,/static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png 900w"
+            srcSet="/static/dca7f4c406b8527e88de0adf9e17a894/d8461/NewWebsiteBlueMockupInstagram-Laptop3.png 225w, /static/dca7f4c406b8527e88de0adf9e17a894/d76bd/NewWebsiteBlueMockupInstagram-Laptop3.png 450w, /static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png 900w"
             style={
               Object {
                 "backgroundColor": undefined,
@@ -146,6 +146,7 @@ exports[`Portfolio Item renders correctly 1`] = `
         size="small"
       >
         <a
+          data-testid="deployed"
           href="https://www.jamesthedogwalker.com/"
           target="_blank"
         >
@@ -157,6 +158,7 @@ exports[`Portfolio Item renders correctly 1`] = `
         size="small"
       >
         <a
+          data-testid="repo"
           href="https://github.com/kelsimhoyle/james-dog-walker"
           target="_blank"
         >
@@ -171,6 +173,7 @@ exports[`Portfolio Item renders correctly 1`] = `
   >
     <h3
       className="sc-hBEYId cAbvZo"
+      data-testid="title"
     >
       James the Dog Walker
     </h3>
@@ -181,6 +184,7 @@ exports[`Portfolio Item renders correctly 1`] = `
           "__html": "<p>A Southern California dog walking company. Custom headless CMS utilizing Airtable to give client control over content and organize contact requests. Deployed on AWS Amplify. Front end technologies include: React, Gatsby, and Tailwind CSS.</p>",
         }
       }
+      data-testid="about"
     />
     <h4>
       Technologies:
@@ -202,6 +206,7 @@ exports[`Portfolio Item renders correctly 1`] = `
       className="sc-iqHYmW frONGD"
     >
       <a
+        data-testid="slug"
         href="/portfolio/james-the-dog-walker"
       >
         Learn More
