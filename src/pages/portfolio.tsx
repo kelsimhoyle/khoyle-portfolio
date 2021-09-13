@@ -6,7 +6,26 @@ import { ContentLight, PortfolioContainer } from "../styles";
 
 import Seo from "../components/Seo";
 
-const Portfolio: React.FC<PageProps<any>> = ({ data }) => {
+import { PortfolioInterface } from "../interfaces";
+
+interface PortfolioNode {
+  data: PortfolioInterface;
+}
+
+interface PortfolioPageProps {
+  clients: {
+    edges: {
+      node: PortfolioNode
+    }[]
+  }
+  projects: {
+      edges: {
+        node: PortfolioNode
+      }[]
+  }
+}
+
+const Portfolio: React.FC<PageProps<PortfolioPageProps>> = ({ data }) => {
   const clients = data.clients.edges;
   const projects = data.projects.edges;
 
@@ -31,7 +50,7 @@ const Portfolio: React.FC<PageProps<any>> = ({ data }) => {
           </PortfolioContainer>
           <h2>Other Projects</h2>
           <PortfolioContainer>
-          {projects.map(({ node: item }) => (
+            {projects.map(({ node: item }) => (
               <PortfolioItem
                 data={item.data}
                 home={false}

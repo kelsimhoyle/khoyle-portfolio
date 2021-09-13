@@ -4,18 +4,20 @@ import { Link } from "gatsby";
 import { PrimaryLink, HightLightedH3, Btn, BtnFlex } from "../../styles";
 import { PortItem} from "./styles";
 
-type PorfolioItemType = {
-    data: any;
+import { PortfolioInterface } from "../../interfaces";
+
+interface PorfolioItemProps {
+    data: PortfolioInterface;
     home: boolean;
 }
 
-const PortfolioItem = ({ data, home }: PorfolioItemType) => {
+const PortfolioItem = ({ data, home }: PorfolioItemProps) => {
     const { Name, Slug, Category, Notes, Image, Goals, Deployed, Repo } = data;
 
     return (
-        <PortItem home={home}>
-            <div className="image-div">
-                <GatsbyImage image={getImage(Image.localFiles[0])} alt={Name} objectFit="contain" />
+        <PortItem home={home} data-testid="item">
+            <div className="image-div" data-testid="image-div">
+                <GatsbyImage data-testid="image" image={getImage(Image.localFiles[0])} alt={Name} objectFit="contain" />
                 <BtnFlex>
                     {Deployed && (
                         <Btn size="small">
@@ -29,7 +31,7 @@ const PortfolioItem = ({ data, home }: PorfolioItemType) => {
                     )}
                 </BtnFlex>
             </div>
-            <div className="about">
+            <div className="about" data-testid="about-div">
                 <HightLightedH3>{Name}</HightLightedH3>
                 <div
                 className="goals"

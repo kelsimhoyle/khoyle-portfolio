@@ -5,7 +5,7 @@ import { Form, TextContainer } from "./styles";
 
 const ContactComponent = () => {
     return (
-        <Form>
+        <Form data->
             <TextContainer>
                 <h3>I'm so glad you found me!</h3>
                 <p>Fill out the form to start a conversation.</p>
