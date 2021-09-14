@@ -63,11 +63,9 @@ const data: PortfolioInterface = {
 
 describe("Portfolio Item", () => {
     it("renders correctly", () => {
-
         const tree = renderer.create(<PortfolioItem data={data} home={false} />).toJSON()
         expect(tree).toMatchSnapshot()
     })
-
 });
 
 beforeEach(() => {

@@ -41,6 +41,7 @@ const ContactForm = () => {
                     value={contactData.Name as string}
                     onChange={handleInputChange}
                     placeholder="Name"
+                    data-testid="name-input"
                 />
                 <label htmlFor="Email">
                     E-Mail
