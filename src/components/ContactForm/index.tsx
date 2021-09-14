@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import addContact from "../../functions/addContact";
-import { Btn } from "../../styles";
 import { Form } from "./styles";
 
 export type ContactDataType = {
@@ -9,7 +8,7 @@ export type ContactDataType = {
     Message: String;
 }
 
-const ContactForm = () => {
+const ContactForm: React.FC<{}> = () => {
     const [data, setData] = useState({ errors: [], submitting: false, submitted: false });
     const [contactData, setContactData] = useState<ContactDataType>({ Name: "", Email: "", Message: "" });
 
@@ -30,7 +29,7 @@ const ContactForm = () => {
 
     return (
         <>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} data-testid="form">
                 <label htmlFor="Name">
                     Name
                 </label>
@@ -53,7 +52,7 @@ const ContactForm = () => {
                     value={contactData.Email as string}
                     onChange={handleInputChange}
                     placeholder="Email"
-
+                    data-testid="email-input"
                 />
                 <label htmlFor="Message">
                     Message
@@ -65,9 +64,12 @@ const ContactForm = () => {
                     value={contactData.Message as string}
                     onChange={handleInputChange}
                     placeholder="Message"
-
+                    data-testid="message-input"
                 />
-                <button type="submit">Submit</button>
+                <button
+                    type="submit"
+                    data-testid="button"
+                >Submit</button>
             </Form>
 
             {
@@ -78,7 +80,7 @@ const ContactForm = () => {
 
             {data.submitting ? <p>Submitting contact request...</p> : null}
 
-            {data.submitted ? <p>Thank you! I will get back to you within 2 business days</p> : null}
+            {data.submitted ? <p className="submitted">Thank you! I will get back to you within 2 business days!</p> : null}
         </>
     );
 };

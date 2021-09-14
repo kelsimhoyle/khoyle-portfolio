@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import { render } from "@testing-library/react";
 import renderer from "react-test-renderer";
 
@@ -43,8 +43,6 @@ test("the nav ul has the correct li items", () => {
 
     expect(navEl).toHaveProperty("children");
     expect(container.firstChild.childNodes.length).toEqual(data.length);
-
-
 });
 
 test("each link has the correct href", () => {
