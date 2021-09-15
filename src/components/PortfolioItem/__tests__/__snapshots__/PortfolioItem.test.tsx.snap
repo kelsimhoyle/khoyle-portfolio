@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Portfolio Item renders correctly 1`] = `
+<div
+  className="sc-kfzBvY iosZMF"
+  data-testid="item"
+>
+  <div
+    className="image-div"
+    data-testid="image-div"
+  >
+    <div
+      className="gatsby-image-wrapper gatsby-image-wrapper-constrained"
+      data-gatsby-image-wrapper=""
+      style={
+        Object {
+          "backgroundColor": undefined,
+          "display": "inline-block",
+          "overflow": "hidden",
+          "position": "relative",
+          "verticalAlign": "top",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "block",
+            "maxWidth": 900,
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden="true"
+          role="presentation"
+          src="data:image/svg+xml;charset=utf-8,%3Csvg height='900' width='900' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+          style={
+            Object {
+              "display": "block",
+              "maxWidth": "100%",
+              "position": "static",
+            }
+          }
+        />
+      </div>
+      <div
+        aria-hidden={true}
+        data-placeholder-image=""
+        style={
+          Object {
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <picture>
+        <source
+          data-srcset="/static/dca7f4c406b8527e88de0adf9e17a894/252a0/NewWebsiteBlueMockupInstagram-Laptop3.webp 225w,/static/dca7f4c406b8527e88de0adf9e17a894/2890f/NewWebsiteBlueMockupInstagram-Laptop3.webp 450w,/static/dca7f4c406b8527e88de0adf9e17a894/3987a/NewWebsiteBlueMockupInstagram-Laptop3.webp 900w"
+          sizes="(min-width: 900px) 900px, 100vw"
+          type="image/webp"
+        />
+        <img
+          alt="James the Dog Walker"
+          data-gatsby-image-ssr=""
+          data-main-image=""
+          data-src="/static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png"
+          data-srcset="/static/dca7f4c406b8527e88de0adf9e17a894/d8461/NewWebsiteBlueMockupInstagram-Laptop3.png 225w, /static/dca7f4c406b8527e88de0adf9e17a894/d76bd/NewWebsiteBlueMockupInstagram-Laptop3.png 450w, /static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png 900w"
+          data-testid="image"
+          decoding="async"
+          loading="lazy"
+          onLoad={[Function]}
+          sizes="(min-width: 900px) 900px, 100vw"
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "height": "100%",
+              "left": 0,
+              "objectFit": "contain",
+              "objectPosition": undefined,
+              "opacity": 0,
+              "position": "absolute",
+              "top": 0,
+              "transform": "translateZ(0)",
+              "transition": "opacity 250ms linear",
+              "width": "100%",
+              "willChange": "opacity",
+            }
+          }
+        />
+      </picture>
+      <noscript>
+        <picture>
+          <source
+            sizes="(min-width: 900px) 900px, 100vw"
+            srcSet="/static/dca7f4c406b8527e88de0adf9e17a894/252a0/NewWebsiteBlueMockupInstagram-Laptop3.webp 225w,/static/dca7f4c406b8527e88de0adf9e17a894/2890f/NewWebsiteBlueMockupInstagram-Laptop3.webp 450w,/static/dca7f4c406b8527e88de0adf9e17a894/3987a/NewWebsiteBlueMockupInstagram-Laptop3.webp 900w"
+            type="image/webp"
+          />
+          <img
+            alt="James the Dog Walker"
+            data-gatsby-image-ssr=""
+            data-main-image=""
+            data-testid="image"
+            decoding="async"
+            loading="lazy"
+            onLoad={[Function]}
+            sizes="(min-width: 900px) 900px, 100vw"
+            src="/static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png"
+            srcSet="/static/dca7f4c406b8527e88de0adf9e17a894/d8461/NewWebsiteBlueMockupInstagram-Laptop3.png 225w, /static/dca7f4c406b8527e88de0adf9e17a894/d76bd/NewWebsiteBlueMockupInstagram-Laptop3.png 450w, /static/dca7f4c406b8527e88de0adf9e17a894/db189/NewWebsiteBlueMockupInstagram-Laptop3.png 900w"
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "height": "100%",
+                "left": 0,
+                "objectFit": "contain",
+                "objectPosition": undefined,
+                "opacity": 0,
+                "position": "absolute",
+                "top": 0,
+                "transform": "translateZ(0)",
+                "transition": "opacity 250ms linear",
+                "width": "100%",
+                "willChange": "opacity",
+              }
+            }
+          />
+        </picture>
+      </noscript>
+      <script
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "const t=\\"undefined\\"!=typeof HTMLImageElement&&\\"loading\\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\\"img[data-main-image]\\");for(let e of t){e.dataset.src&&(e.setAttribute(\\"src\\",e.dataset.src),e.removeAttribute(\\"data-src\\")),e.dataset.srcset&&(e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\"));const t=e.parentNode.querySelectorAll(\\"source[data-srcset]\\");for(let e of t)e.setAttribute(\\"srcset\\",e.dataset.srcset),e.removeAttribute(\\"data-srcset\\");e.complete&&(e.style.opacity=1)}}",
+          }
+        }
+        type="module"
+      />
+    </div>
+    <div
+      className="sc-hHfuMS jmVEAP"
+    >
+      <div
+        className="sc-kstqJO hvOCEn"
+        size="small"
+      >
+        <a
+          data-testid="deployed"
+          href="https://www.jamesthedogwalker.com/"
+          target="_blank"
+        >
+          Visit Website
+        </a>
+      </div>
+      <div
+        className="sc-kstqJO hvOCEn"
+        size="small"
+      >
+        <a
+          data-testid="repo"
+          href="https://github.com/kelsimhoyle/james-dog-walker"
+          target="_blank"
+        >
+          GitHub Repo
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="about"
+    data-testid="about-div"
+  >
+    <h3
+      className="sc-hBEYId cAbvZo"
+      data-testid="title"
+    >
+      James the Dog Walker
+    </h3>
+    <div
+      className="goals"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>A Southern California dog walking company. Custom headless CMS utilizing Airtable to give client control over content and organize contact requests. Deployed on AWS Amplify. Front end technologies include: React, Gatsby, and Tailwind CSS.</p>",
+        }
+      }
+      data-testid="about"
+    />
+    <h4>
+      Technologies:
+    </h4>
+    <p>
+       JavaScript /
+       GraphQL /
+       Gatsby /
+       CMS /
+       API /
+       Custom CMS /
+       Headless /
+       SEO /
+       React /
+       Tailwind CSS /
+       AWS Amplify /
+    </p>
+    <span
+      className="sc-iqHYmW frONGD"
+    >
+      <a
+        data-testid="slug"
+        href="/portfolio/james-the-dog-walker"
+      >
+        Learn More
+      </a>
+    </span>
+  </div>
+</div>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contact buttons renders correctly 1`] = `
+<ul
+  className="sc-dmlqKv bezaOw"
+  data-testid="nav"
+>
+  <li>
+    <span
+      className="sc-iqHYmW frONGD"
+    >
+      <a
+        className="link"
+        href="/"
+      >
+        Home
+      </a>
+    </span>
+  </li>
+  <li>
+    <span
+      className="sc-iqHYmW frONGD"
+    >
+      <a
+        className="link"
+        href="/about"
+      >
+        About
+      </a>
+    </span>
+  </li>
+  <li>
+    <span
+      className="sc-iqHYmW frONGD"
+    >
+      <a
+        className="link"
+        href="/portfolio"
+      >
+        Portfolio
+      </a>
+    </span>
+  </li>
+  <li>
+    <span
+      className="sc-iqHYmW frONGD"
+    >
+      <a
+        className="link"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </span>
+  </li>
+</ul>
+`;

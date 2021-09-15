@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contact buttons renders correctly 1`] = `
+<form
+  className="sc-bdfBQB cdNhYF"
+  data-testid="form"
+  name="contact-form"
+  onSubmit={[Function]}
+>
+  <label
+    htmlFor="Name"
+  >
+    Name
+  </label>
+  <input
+    data-testid="name-input"
+    name="Name"
+    onChange={[Function]}
+    placeholder="Name"
+    type="text"
+    value=""
+  />
+  <label
+    htmlFor="Email"
+  >
+    E-Mail
+  </label>
+  <input
+    data-testid="email-input"
+    name="Email"
+    onChange={[Function]}
+    placeholder="Email"
+    type="text"
+    value=""
+  />
+  <label
+    htmlFor="Message"
+  >
+    Message
+  </label>
+  <textarea
+    data-testid="message-input"
+    name="Message"
+    onChange={[Function]}
+    placeholder="Message"
+    rows={5}
+    value=""
+  />
+  <button
+    data-testid="button"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;

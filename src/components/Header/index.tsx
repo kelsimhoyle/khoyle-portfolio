@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect } from "react"
-import { Link } from "gatsby"
+import React, { useState, useRef, useEffect } from "react";
+import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { MenuLinksType } from "../../layouts";
 import { Navbar, HamburgerButton, HamburgerContainer } from "./styles";
 import { PrimaryLink } from "../../styles";
 import ContactButtons from "../ContactButtons";
-import { FaGlasses } from "react-icons/fa";
 
 type HeaderProps = {
   siteTitle: string;

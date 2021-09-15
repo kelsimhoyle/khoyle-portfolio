@@ -13,7 +13,19 @@
       "noUnusedLocals": true,
       "noUnusedParameters": true,
       "removeComments": false,
-      "typeRoots" : ["node_modules/@types", "src/types"]
+      "typeRoots" : ["node_modules/@types", "src/types"],
+      "paths": {
+        "@app/*": ["src/*"],
+        "@components/*": ["src/components/*"],
+        "@layouts/*": ["src/layouts/*"],
+        "@pages/*": ["src/pages/*"],
+        "@templates/*": ["src/templates/*"],
+        "@styles/*": ["src/styles/*"],
+        "@functions/*": ["src/functions/*"]
+      }
     },
-    "include": ["./src/**/*"]
+    "include": [
+      "./src/**/*",
+      "./jest-setup.ts"
+    ]
   }

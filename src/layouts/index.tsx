@@ -8,7 +8,6 @@ import { GlobalStyle } from "../styles/utils";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import "./layout.css"
 
 interface LayoutPropsInterface {
   children: React.ReactNode
@@ -55,13 +54,13 @@ const Layout = ({ children }: LayoutPropsInterface) => {
   }
   `)
 
-  const siteTitle: string = data.siteData.siteMetadata?.title || `Title`;
+  const siteTitle: string = data.siteData.siteMetadata?.title || `Kelsi Hoyle`;
   const menuLinks: MenuLinksType[] = data.siteData.siteMetadata.menuLinks;
   const headerLogo: any = data.headerLogo;
   const footerLogo: any = data.footerLogo;
 
   return (
-    <>
+    <React.Fragment data-testid="layout">
       <GlobalStyle />
       <Header
         siteTitle={siteTitle}
@@ -74,7 +73,7 @@ const Layout = ({ children }: LayoutPropsInterface) => {
         menuLinks={menuLinks}
         logo={footerLogo}
       />
-    </>
+    </React.Fragment>
   )
 }
 

@@ -4,17 +4,18 @@ import { PrimaryLink } from "../../styles";
 import { MenuLinksType } from "../../layouts";
 import { NavUl } from "./styles";
 
-type NavLinksProps = {
+export interface NavLinksProps {
     menuLinks: MenuLinksType[]
 }
 
-const NavLinks = ({ menuLinks }: NavLinksProps) => {
+const NavLinks: React.FC<NavLinksProps> = ({ menuLinks }) => {
     return (
-        <NavUl>
+        <NavUl data-testid="nav">
             {menuLinks.map(link => (
                 <li key={link.name}>
                     <PrimaryLink>
-                        <Link to={link.link}>
+                        <Link to={link.link}
+                        className="link">
                             {link.name}
                         </Link>
                     </PrimaryLink>

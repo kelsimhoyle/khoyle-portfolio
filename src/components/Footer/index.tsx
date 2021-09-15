@@ -4,9 +4,8 @@ import NavLinks from "../NavLinks";
 import { MenuLinksType } from "../../layouts";
 import { StyledFooter } from "./styles";
 import ContactButtons from "../ContactButtons";
-// import logo from "../../images/2.png";
 
-type FooterProps = {
+export type FooterProps = {
     siteTitle: string;
     menuLinks: MenuLinksType[];
     logo: any;
