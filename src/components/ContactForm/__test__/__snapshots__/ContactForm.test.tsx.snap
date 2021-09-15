@@ -4,6 +4,7 @@ exports[`contact buttons renders correctly 1`] = `
 <form
   className="sc-bdfBQB cdNhYF"
   data-testid="form"
+  name="contact-form"
   onSubmit={[Function]}
 >
   <label

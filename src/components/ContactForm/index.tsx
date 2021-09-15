@@ -29,7 +29,7 @@ const ContactForm: React.FC<{}> = () => {
 
     return (
         <>
-            <Form onSubmit={handleSubmit} data-testid="form">
+            <Form onSubmit={handleSubmit} data-testid="form" name="contact-form">
                 <label htmlFor="Name">
                     Name
                 </label>

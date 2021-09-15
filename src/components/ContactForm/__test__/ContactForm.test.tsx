@@ -7,9 +7,6 @@ import ContactForm from "..";
 let getByTestId;
 let getByText;
 
-
-const onSubmit = jest.fn(e => e.preventDefault())
-
 beforeEach(() => {
     jest.clearAllMocks();
     const component = render(<ContactForm />);
@@ -45,11 +42,11 @@ test("input values change", () => {
 
     fireEvent.change(messageInput, {
         target: {
-            value: "Hello!"
+            value: "Hello! This is a test."
         }
     });
 
-    expect(messageInput.value).toBe("Hello!");
+    expect(messageInput.value).toBe("Hello! This is a test.");
 
 });
 
@@ -83,7 +80,7 @@ test("form submits", () => {
 
     fireEvent.change(messageInput, {
         target: {
-            value: "Hello!"
+            value: "Hello! This is a test."
         }
     });
 
