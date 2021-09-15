@@ -31,7 +31,7 @@ const Portfolio: React.FC<PageProps<PortfolioPageProps>> = ({ data }) => {
 
   return (
     <>
-      <Seo title="Kelsi Hoyle - Portfolio" />
+      <Seo title="Portfolio" />
       <div>
         <ContentLight>
           <h2>Portfolio</h2>

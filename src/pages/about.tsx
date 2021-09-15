@@ -11,7 +11,7 @@ import Seo from "../components/Seo";
 const About: React.FC<PageProps<any>> = ({ data }: any) => {
     return (
         <>
-            <Seo title="Kelsi Hoyle - About" />
+            <Seo title="About" />
             <Grid.Container>
                 <Grid.ImgDiv>
                     <GatsbyImage image={getImage(data.file)} alt="Kelsi Hoyle" />

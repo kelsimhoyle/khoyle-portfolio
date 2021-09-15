@@ -3,10 +3,10 @@ import ContactComponent from "../components/ContactComponent";
 import Seo from "../components/Seo";
 import { ContactPage } from "../styles";
 
-const Contact = () => {
+const Contact: React.FC<{}> = () => {
     return (
         <>
-            <Seo title="Kelsi Hoyle - Contact" />
+            <Seo title="Contact" />
             <ContactPage>
                 <ContactComponent />
             </ContactPage>

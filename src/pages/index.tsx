@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps<any>> = ({ data }) => {
 
   return (
     <>
-      <Seo title="Kelsi Hoyle - Full Stack Web Developer" />
+      <Seo title="Kelsi Hoyle" />
       <div>
         {/* <Parallax background={bg} height="70vh">
           <Landing>
